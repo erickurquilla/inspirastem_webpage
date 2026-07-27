@@ -1,0 +1,8 @@
+https://inspirastem.com -O /home/erick/software/inspirastem_ws +*.inspirastem.com/* -v
+File generated automatically on Mon, 27 Jul 2026 13:04:40, do NOT edit
+
+To update a mirror, just launch httrack without any parameters
+The existing cache will be used (and modified)
+To have other options, retype all parameters and launch HTTrack
+To continue an interrupted mirror, just launch httrack without any parameters
+

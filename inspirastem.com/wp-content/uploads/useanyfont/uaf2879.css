@@ -1,0 +1,10 @@
+				@font-face {
+					font-family: 'ntbricksans';
+					src: url('8873NTBrickSans.woff2') format('woff2'),
+						url('8873NTBrickSans.woff') format('woff');
+					  font-display: auto;
+				}
+
+				.ntbricksans{font-family: 'ntbricksans' !important;}
+
+		

@@ -1,0 +1,86 @@
+/*
+Theme Name: Uttama
+Theme URI: https://wpkoi.com/uttama-wpkoi-wordpress-theme/
+Template: martanda
+Author: wpkoithemes
+Author URI: https://wpkoi.com
+Description: Uttama, a dynamic child theme derived from the Martanda WPKoi theme, offers a contemporary, colorful design for unique portfolio, business or agency websites. It's a versatile multipurpose theme ideal for showcasing your art, business, event, portfolio, blog, webshop, or products. Uttama seamlessly integrates the power of Elementor's drag-and-drop page builder, WooCommerce shop module, and Contact Form 7 for effective content management. The premium demo leverages the Uttama premium plugin for added features. With an intuitive admin panel, extensive customizer options, and block-based template parts, Uttama empowers you to build your dream website without any coding expertise. This responsive theme ensures a flawless display on various devices, enhancing user experience. Craft your online presence with Uttama and share it with the world. Comprehensive installation and styling guidance is available in our documentation at wpkoi.com/docs.
+Requires at least: 6.1
+Tested up to: 6.6
+Requires PHP: 7.0
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
+Text Domain: uttama
+Tags: one-column, blog, e-commerce, flexible-header, full-width-template, custom-background, custom-colors, sticky-post, translation-ready, featured-images, editor-style
+
+*/
+.uttama-title-holder h1 {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.wp-block-navigation .has-child .wp-block-navigation__submenu-container>.wp-block-navigation-item>.wp-block-navigation-item__content {
+    padding: 5px 10px;
+}
+.site-info {
+    padding: 0 1vw 1vw;
+    text-align: center;
+}
+.site-header .wp-block-site-title {
+    line-height: var(--martanda--site-title-font-size);
+}
+.martanda-side-left-text-content {
+    white-space: nowrap;
+}
+.wpkoi-elements-adv-accordion .wpkoi-elements-accordion-list .wpkoi-elements-accordion-header {
+    text-align: center;
+    display: block;
+}
+.wpkoi-elements-adv-accordion .wpkoi-elements-accordion-list .wpkoi-elements-accordion-content {
+    text-align: center;
+}
+.wp-block-separator.has-background.footer-separator {
+    height: 3px;
+}
+.wp-block-navigation .has-child:not(.open-on-click):hover>.wp-block-navigation__submenu-container {
+    min-width: 220px;
+}
+table, td, th {
+    border-color: rgba(255,255,255,.2) !important;
+}
+.wp-block-social-links.is-style-pill-shape .wp-social-link a {
+    padding-left: 0.25em;
+    padding-right: 0.25em;
+}
+.overflow-hidden {
+    overflow: hidden !important;
+}
+#content .elementor-toggle a, #content .elementor-accordion a, #content .button, #content .woocommerce a.button, #content .woocommerce button.button, html #content input[type=button], #content input[type=reset], #content input[type=submit] {
+    text-decoration: inherit;
+}
+.uttama-nav-effect .site-header .wp-block-navigation .wp-block-navigation__container li a, .uttama-nav-effect .site-header .wp-block-navigation .wp-block-navigation__container .block-editor-block-list__block a {
+    transition: 0.3s;
+}
+.uttama-nav-effect .site-header .wp-block-navigation .wp-block-navigation__container li a:hover, .uttama-nav-effect .site-header .wp-block-navigation .wp-block-navigation__container .block-editor-block-list__block a:hover {
+    transform: scale(0.9);
+}
+.uttama-nav-effect .site-header .wp-block-navigation .wp-block-navigation__container li li a:hover {
+    transform: none;
+}
+.wp-block-navigation__responsive-container.is-menu-open {
+    padding-right: 4vw 
+}
+.martanda-scrollbar::-webkit-scrollbar-thumb {
+    border: 2px solid transparent;
+    background-clip: content-box;
+}
+.martanda-scrollbar::-webkit-scrollbar-thumb:hover {
+    border: 2px solid transparent;
+    background-clip: content-box;
+}
+.site-header .wp-block-site-title a {
+    display: block;
+}
+.socialborder li {
+    border: 1px solid;
+}
