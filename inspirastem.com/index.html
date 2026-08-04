@@ -512,7 +512,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
         size: "lead",
         items: [
           { name: "Davivienda", logoUrl: "wp-content/uploads/reuploads/davivienda.webp", url: "" },
-          { name: "Crecer",     logoUrl: "wp-content/uploads/reuploads/crecer.png", url: "" },
+          { name: "Crecer",     logoUrl: "wp-content/uploads/reuploads/crecer.png", url: "", sizeClass: "max-h-14 sm:max-h-16 md:max-h-20" },
           { name: "Ministerio de Relaciones Exteriores",     logoUrl: "wp-content/uploads/reuploads/logo_ministerio%20de%20relaciones%20exteriores.png", url: "" },
         ],
       },
@@ -540,7 +540,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
       img.src = sponsor.logoUrl;
       img.alt = sponsor.name;
       img.loading = "lazy";
-      img.className = `w-auto ${sizeClass} object-contain`;
+      img.className = `w-auto ${sponsor.sizeClass || sizeClass} object-contain`;
 
       // Graceful fallback so a missing/placeholder URL never breaks the layout.
       img.onerror = () => {
