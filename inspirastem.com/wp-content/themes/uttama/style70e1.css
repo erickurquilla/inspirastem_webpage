@@ -84,3 +84,15 @@ table, td, th {
 .socialborder li {
     border: 1px solid;
 }
+
+/* Fix header nav — logo closer to bar, nav column wider so items don't wrap */
+.site-header-holder .wp-block-columns .wp-block-columns > .wp-block-column:nth-child(1) {
+    flex-basis: 11% !important;
+    min-width: 0;
+}
+.site-header-holder .wp-block-columns .wp-block-columns > .wp-block-column:nth-child(2) {
+    flex-basis: 82% !important;
+}
+.site-header-holder .wp-block-columns .wp-block-columns > .wp-block-column:nth-child(3) {
+    flex-basis: 7% !important;
+}
