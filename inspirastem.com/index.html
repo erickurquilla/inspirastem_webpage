@@ -250,7 +250,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 	<ul class="mega-sub-menu">
 <li class="mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-menu-item-1275" id="mega-menu-item-1275"><a class="mega-menu-link" href="fernanda-sulantay-vargas/index.html">Fernanda Sulantay Vargas</a></li><li class="mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-menu-item-1276" id="mega-menu-item-1276"><a class="mega-menu-link" href="miguel-montalvo/index.html">Miguel Montalvo</a></li><li class="mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-menu-item-1277" id="mega-menu-item-1277"><a class="mega-menu-link" href="alex-martinez/index.html">Alex Martinez</a></li><li class="mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-menu-item-1278" id="mega-menu-item-1278"><a class="mega-menu-link" href="erick-urquilla/index.html">Erick Urquilla</a></li><li class="mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-menu-item-1279" id="mega-menu-item-1279"><a class="mega-menu-link" href="michael-sanchez/index.html">Michael Sánchez</a></li><li class="mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-menu-item-1280" id="mega-menu-item-1280"><a class="mega-menu-link" href="wilber-alexander-alvarado/index.html">Wilber Alexander Alvarado</a></li>	</ul>
 </li><li class="mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-menu-item-2062" id="mega-menu-item-2062"><a class="mega-menu-link" href="posters/index.html">Posters</a></li></ul>
-<li class="mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-align-bottom-left mega-menu-flyout mega-has-icon mega-icon-left mega-menu-item-startup" id="mega-menu-item-startup"><a class="dashicons-portfolio mega-menu-link" href="startup-stem/index.html" tabindex="0">Startup STEM</a></li></li></ul><button class='mega-close' aria-label='Close'></button></div></div>
+<li class="mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-align-bottom-left mega-menu-flyout mega-has-icon mega-icon-left mega-menu-item-startup" id="mega-menu-item-startup"><a class="dashicons-portfolio mega-menu-link" href="startup-stem/index.html" tabindex="0">Startup STEM</a></li><li class="mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-align-bottom-left mega-menu-flyout mega-has-icon mega-icon-left mega-menu-item-ponentes" id="mega-menu-item-ponentes"><a class="dashicons-microphone mega-menu-link" href="ponentes/index.html" tabindex="0">Ponentes</a></li></li></ul><button class='mega-close' aria-label='Close'></button></div></div>
 
 
 
@@ -490,6 +490,12 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
   <!-- To maintain: edit the `sponsors` array in the script below.   -->
   <!-- Nothing else needs to change — layout re-flows automatically.  -->
   <!-- ============================================================= -->
+  <style>
+    /* Per-logo size overrides — more reliable than JS class injection */
+    #sponsors-tiers img[src*="steiner"]  { height: 8rem !important; width: auto !important; }
+    #sponsors-tiers img[src*="mentos"]   { max-height: 3rem !important; width: auto !important; }
+    #sponsors-tiers img[src*="okf"]      { max-height: 3rem !important; width: auto !important; }
+  </style>
   <section aria-labelledby="sponsors-heading" class="mx-auto max-w-8xl px-6 py-16 sm:py-20">
 
 
@@ -515,6 +521,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
           { name: "Crecer",     logoUrl: "wp-content/uploads/reuploads/crecer.png", url: "", sizeClass: "max-h-14 sm:max-h-16 md:max-h-20" },
           { name: "Ministerio de Relaciones Exteriores",     logoUrl: "wp-content/uploads/reuploads/logo_ministerio%20de%20relaciones%20exteriores.png", url: "" },
           { name: "Universidad Don Bosco", logoUrl: "wp-content/uploads/reuploads/don_bosco.png", url: "" },
+          { name: "Steiner", logoUrl: "wp-content/uploads/reuploads/steiner.png", url: "" },
         ],
       },
       {
@@ -524,6 +531,9 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
           { name: "Grupo Roble",   logoUrl: "wp-content/uploads/reuploads/roble.png", url: "" },
           { name: "Sandbox",       logoUrl: "wp-content/uploads/reuploads/sandbox.jpg", url: "" },
           { name: "Hotel Citlalli", logoUrl: "wp-content/uploads/reuploads/citlally.jpeg", url: "" },
+          { name: "Maruchan",      logoUrl: "wp-content/uploads/reuploads/maruchan.png", url: "" },
+          { name: "Mentos",        logoUrl: "wp-content/uploads/reuploads/mentos.jpeg", url: "" },
+          { name: "OKF",           logoUrl: "wp-content/uploads/reuploads/okf.png", url: "" },
         ],
       },
     ];
@@ -542,6 +552,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
       img.alt = sponsor.name;
       img.loading = "lazy";
       img.className = `w-auto ${sponsor.sizeClass || sizeClass} object-contain`;
+      if (sponsor.imgStyle) img.style.cssText = sponsor.imgStyle;
 
       // Graceful fallback so a missing/placeholder URL never breaks the layout.
       img.onerror = () => {
